@@ -13,4 +13,4 @@
 
 
 [GitHub](https://git.oschina.net/ecitlm/splider)
-[Get Started](https://ecitlm.github.io/TP5_Splider/#/?id=tp5_splider)
+[Get Started](?id=tp5_splider)
