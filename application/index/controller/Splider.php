@@ -18,14 +18,12 @@ class Splider
     public function splider()
     {
         $filePath = 'http://www.meizitu.com/';
-        $data=Http_Spider($filePath);
-
-       \phpQuery::newDocumentHTML($data);
-
+        $data = Http_Spider($filePath);
+        \phpQuery::newDocumentHTML($data);
         $arr = array();
         $list = pq('#picture')->find("a");
         foreach ($list as $li) {
-            $title = pq($li)->attr('title') ;
+            $title = pq($li)->attr('title');
             $url = pq($li)->attr('href');
             $img = pq($li)->find('img')->attr('src');
 
@@ -36,7 +34,6 @@ class Splider
             );
             array_push($arr, $tmp);
         }
-
         return json([
             'msg' => 'success',
             'code' => 1,

@@ -22,7 +22,6 @@ class Video
         ]);
     }
 
-
     /**
      *视频分类列表
      */
@@ -31,9 +30,7 @@ class Video
 
         $type = (isset($_GET['type'])) ? intval($_GET ['type']) : 0;
         $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 10;
-
         $video_type = \think\Config::get("news")['video_type'][$type];
-
         if (empty($video_type)) {
             return json([
                 'msg' => '请填写正确的参数请求',
