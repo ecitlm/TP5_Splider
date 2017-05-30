@@ -8,6 +8,7 @@
 namespace app\index\controller;
 class News
 {
+    const CM163 = 'http://c.m.163.com/nc/article';
     public function index()
     {
         return json([
@@ -21,7 +22,7 @@ class News
      */
     public function banner()
     {
-        $res = HttpGet("http://c.m.163.com/nc/article/headline/list/0-10.html?from=toutiao&passport=&devId");
+        $res = HttpGet(self::CM163."/headline/list/0-10.html?from=toutiao&passport=&devId");
         $arr = json_decode($res, true);
         return json($arr);
     }
@@ -40,7 +41,6 @@ class News
         $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 10;
 
         $news_type = \think\Config::get("news")['news_type'][$type];
-        slog($news_type);
 
         if (empty($news_type)) {
 
@@ -49,7 +49,7 @@ class News
                 'code' => 0
             ]);
         }
-        $url = "http://c.m.163.com/nc/article/headline/" . $news_type . "/" . $page . "-10.html";
+        $url = self::CM163."/headline/" . $news_type . "/" . $page . "-10.html";
         $res = HttpGet($url);
         $arr = json_decode($res, true);
         return json([
@@ -69,7 +69,7 @@ class News
     {
 
         $id = (isset($_GET['postid'])) ? $_GET ['postid'] : "CLJMJRRL000181KT";
-        $url = "http://c.m.163.com/nc/article/" . $id . "/full.html";
+        $url = self::CM163."/" . $id . "/full.html";
         $res = HttpGet($url);
         $arr = json_decode($res, true);
         return json([
