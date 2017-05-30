@@ -27,7 +27,7 @@ TP5_Splider
    `News/banner`
 
    **调用例子:**
-   `http://localhost:8050/index.php/index/News/banner`
+   `http://www.xxx.com/index.php/index/News/banner`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -67,7 +67,7 @@ TP5_Splider
    `/News/new_list?type=1&page=20`
 
    **调用例子:**
-   `http://localhost:8050/index.php/index/News/new_list?type=1&page=20`
+   `http://www.xxx.com/index.php/index/News/new_list?type=1&page=20`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -83,7 +83,7 @@ TP5_Splider
   `/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
 
   **调用例子:**
-  `http://localhost:8050/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
+  `http://www.xxx.com/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -195,7 +195,7 @@ TP5_Splider
   `/News/local_news?name=广东省_深圳市`
 
   **调用例子:**
-  `http://localhost:8050/index.php/index/News/local_news?name=广东省_深圳市`
+  `http://www.xxx.com/index.php/index/News/local_news?name=广东省_深圳市`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
   ```
@@ -249,7 +249,7 @@ TP5_Splider
   `/Video/video_type?type=2&page=10`
   **调用例子:** 
   
-   `http://localhost:8050/index.php/index/Video/video_type?type=2&page=10`
+   `http://www.xxx.com/index.php/index/Video/video_type?type=2&page=10`
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ``` javascript
 {
@@ -302,7 +302,7 @@ TP5_Splider
 `/Video/video_detail?vid=VEKKO9TJP`
 
 **调用例子:**
- `http://localhost:8050/index.php/index/Video/video_detail?vid=VEKKO9TJP`
+ `http://www.xxx.com/index.php/index/Video/video_detail?vid=VEKKO9TJP`
  返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
  
 ```javascript
@@ -346,7 +346,7 @@ TP5_Splider
       `/Joke/index?page=10`
       
  **调用例子:**
-      `http://localhost:8050/index.php/index/joke/index?page=10`
+      `http://www.xxx.com/index.php/index/joke/index?page=10`
       返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
 {
@@ -392,7 +392,7 @@ TP5_Splider
       `/Picture/index?page=20` 
       
   **调用例子:**
-      `http://localhost:8050/index.php/index/picture/index?page=20`
+      `http://www.xxx.com/index.php/index/picture/index?page=20`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
