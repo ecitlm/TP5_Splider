@@ -1,6 +1,6 @@
 ![logo](api.png)
 
-# IT开发者-基于Thinkphp5  数据接口
+# IT开发者-基于Thinkphp5 TT5_Splider  API数据
 
 
 基于Thinkphp5 抓取网易新闻 完善整理的新闻API接口
@@ -13,4 +13,4 @@
 
 
 [GitHub](https://git.oschina.net/ecitlm/splider)
-[Get Started](#/?id=splider)
+[Get Started](https://ecitlm.github.io/TP5_Splider/#/?id=tp5_splider)
