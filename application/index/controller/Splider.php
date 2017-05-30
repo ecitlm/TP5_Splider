@@ -7,7 +7,6 @@ class Splider
     public function index()
     {
 
-
     }
 
     public function splider()
@@ -15,10 +14,7 @@ class Splider
         $filePath = 'http://www.meizitu.com/';
         $data=Http_Spider($filePath);
 
-
        \phpQuery::newDocumentHTML($data);
-
-        //\phpQuery::newDocumentFile($data);
 
         $arr = array();
         $list = pq('#picture')->find("a");
@@ -27,11 +23,11 @@ class Splider
             $url = pq($li)->attr('href');
             $img = pq($li)->find('img')->attr('src');
 
-            $tmp = array([
+            $tmp = array(
                 'title' => $title,
                 'url' => $url,
                 'img' => $img
-            ]);
+            );
             array_push($arr, $tmp);
         }
 
