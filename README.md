@@ -13,7 +13,11 @@ TP5_Splider
 ·
 
 > ThinkPHP5的运行环境要求PHP5.4以上。
+## 安装
 
+```
+git clone  https://github.com/ecitlm/TP5_Splider.git
+```
 
 ## 1. 新闻模块
 
