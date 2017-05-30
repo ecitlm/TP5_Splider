@@ -1,6 +1,6 @@
 ![logo](api.png)
 
-# IT开发者-基于Thinkphp5 TT5_Splider  API数据
+# IT开发者- TP5_Splider  API数据
 
 
 基于Thinkphp5 抓取网易新闻 完善整理的新闻API接口
