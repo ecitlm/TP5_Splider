@@ -1,6 +1,5 @@
 .idea
 composer.lock
 *.log
-thinkphp
 SocketLog.class.php
 slog.php
