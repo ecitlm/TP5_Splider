@@ -474,6 +474,83 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
+{
+    "error": 0,
+    "status": "success",
+    "date": "2017-05-31",
+    "results": [
+        {
+            "currentCity": "广州市",
+            "pm25": "57",
+            "index": [
+                {
+                    "title": "穿衣",
+                    "zs": "热",
+                    "tipt": "穿衣指数",
+                    "des": "天气热，建议着短裙、短裤、短薄外套、T恤等夏季服装。"
+                },
+                {
+                    "title": "洗车",
+                    "zs": "不宜",
+                    "tipt": "洗车指数",
+                    "des": "不宜洗车，未来24小时内有雨，如果在此期间洗车，雨水和路上的泥水可能会再次弄脏您的爱车。"
+                },
+                {
+                    "title": "感冒",
+                    "zs": "少发",
+                    "tipt": "感冒指数",
+                    "des": "各项气象条件适宜，发生感冒机率较低。但请避免长期处于空调房间中，以防感冒。"
+                },
+                {
+                    "title": "运动",
+                    "zs": "较适宜",
+                    "tipt": "运动指数",
+                    "des": "天气较好，较适宜进行各种运动，但因湿度偏高，请适当降低运动强度。"
+                },
+                {
+                    "title": "紫外线强度",
+                    "zs": "中等",
+                    "tipt": "紫外线强度指数",
+                    "des": "属中等强度紫外线辐射天气，外出时建议涂擦SPF高于15、PA+的防晒护肤品，戴帽子、太阳镜。"
+                }
+            ],
+            "weather_data": [
+                {
+                    "date": "周三 05月31日 (实时：32℃)",
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    "weather": "多云",
+                    "wind": "南风3-4级",
+                    "temperature": "32 ~ 26℃"
+                },
+                {
+                    "date": "周四",
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/leizhenyu.png",
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/dayu.png",
+                    "weather": "雷阵雨转大雨",
+                    "wind": "西南风4-5级",
+                    "temperature": "32 ~ 24℃"
+                },
+                {
+                    "date": "周五",
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/dayu.png",
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/zhenyu.png",
+                    "weather": "大雨转阵雨",
+                    "wind": "微风",
+                    "temperature": "29 ~ 24℃"
+                },
+                {
+                    "date": "周六",
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/dayu.png",
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/zhongyu.png",
+                    "weather": "中到大雨转中雨",
+                    "wind": "微风",
+                    "temperature": "28 ~ 24℃"
+                }
+            ]
+        }
+    ]
+}
 
 ```
 
