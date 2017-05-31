@@ -192,7 +192,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 ### 1.3 本地新闻
 
 **必选参数:**
-  `name` 地名 如:广东省_深圳市，江西省_南昌市
+  `name` 地名 如:广东省_深圳市，江西省_南昌市  不填写获取当前默认地址
   
   `page` 分页 如0 10 20 30 每次返回10条数据
 
