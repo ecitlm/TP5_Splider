@@ -455,3 +455,25 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 ```
 
 
+
+## 4. 天气预报
+
+说明: 获取城市天气预报：
+
+### 4.1 获取城市天气预报
+
+**必选参数:**
+      `city`   城市地址 如 `深圳市` `北京市` 
+      
+ **接口地址:**
+      `/Weather/get_weather?city=广州市` 
+      
+  **调用例子:**
+      `http://localhost:8050/index.php/index//Weather/get_weather?city=广州市`
+      
+返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
+```javascript
+
+```
+
+

@@ -26,7 +26,7 @@ class Weather
 
     protected function get_city(){
         $getIp = getRemoteIPAddress();
-        $content = file_get_contents("http://api.map.baidu.com/location/ip?ak=enYCQ2yaIIjL8IZfYdA1gi6hK2eqqI2T&ip={$getIp}&coor=bd09ll");
+        $content = file_get_contents("http://api.map.baidu.com/location/ip?ak=enYCQ2yaIIjL8IZfYdA1gi6hK2eqqI2T&ip=120.237.113.106&coor=bd09ll");
         $json = json_decode($content, true);
         $place =urlencode($json['content']['address_detail']['city']);
         return $place;
