@@ -3,7 +3,7 @@ TP5_Splider
 
 
 
-基于Thinkphp5 爬虫整理接口API数据包括以下：
+基于Thinkphp5 和X 易新闻 完善整理的新闻API接口
 
  + 新闻分类(头条/军事/娱乐/体育/科技/艺术/教育/要闻)数据接口
  + 视频分类(精品视频/搞笑视频/美女视频/体育视频/新闻现场)接口
@@ -13,10 +13,10 @@ TP5_Splider
 
 > ThinkPHP5的运行环境要求PHP5.4以上。
 ## 安装
+
 ```
 git clone  https://github.com/ecitlm/TP5_Splider.git
 ```
-
 
 ## 1. 新闻模块
 
@@ -30,7 +30,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
    `News/banner`
 
    **调用例子:**
-   `http://www.xxx.com/index.php/index/News/banner`
+   `http://localhost:8050/index.php/index/News/banner`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -70,7 +70,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
    `/News/new_list?type=1&page=20`
 
    **调用例子:**
-   `http://www.xxx.com/index.php/index/News/new_list?type=1&page=20`
+   `http://localhost:8050/index.php/index/News/new_list?type=1&page=20`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -86,7 +86,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
   `/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
 
   **调用例子:**
-  `http://www.xxx.com/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
+  `http://localhost:8050/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -193,12 +193,14 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 
 **必选参数:**
   `name` 地名 如:广东省_深圳市，江西省_南昌市
+  
+  `page` 分页 如0 10 20 30 每次返回10条数据
 
   **接口地址:**
-  `/News/local_news?name=广东省_深圳市`
+  `/News/local_news?name=广东省_深圳市&page=0`
 
   **调用例子:**
-  `http://www.xxx.com/index.php/index/News/local_news?name=广东省_深圳市`
+  `http://localhost:8050/index.php/index/News/local_news?name=广东省_深圳市&page=0`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
   ```
@@ -252,7 +254,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
   `/Video/video_type?type=2&page=10`
   **调用例子:** 
   
-   `http://www.xxx.com/index.php/index/Video/video_type?type=2&page=10`
+   `http://localhost:8050/index.php/index/Video/video_type?type=2&page=10`
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ``` javascript
 {
@@ -305,7 +307,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 `/Video/video_detail?vid=VEKKO9TJP`
 
 **调用例子:**
- `http://www.xxx.com/index.php/index/Video/video_detail?vid=VEKKO9TJP`
+ `http://localhost:8050/index.php/index/Video/video_detail?vid=VEKKO9TJP`
  返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
  
 ```javascript
@@ -349,7 +351,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `/Joke/index?page=10`
       
  **调用例子:**
-      `http://www.xxx.com/index.php/index/joke/index?page=10`
+      `http://localhost:8050/index.php/index/joke/index?page=10`
       返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
 {
@@ -395,7 +397,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `/Picture/index?page=20` 
       
   **调用例子:**
-      `http://www.xxx.com/index.php/index/picture/index?page=20`
+      `http://localhost:8050/index.php/index/picture/index?page=20`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript

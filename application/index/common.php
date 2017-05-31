@@ -6,16 +6,24 @@
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
+// | Author: 流年 <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// [ 应用入口文件 ]
+// 应用公共文件
 
-// 定义应用目录
 
-//入口文件绑定模块名
-//define('BIND_MODULE','index');
-
-define('APP_PATH', __DIR__ . '/application/');
-// 加载框架引导文件
-require __DIR__ . '/thinkphp/start.php';
+/**
+ * 获取用户ip
+ * @return array|false|string
+ */
+ function getRemoteIPAddress() {
+    global $ip;
+    if (getenv("HTTP_CLIENT_IP"))
+        $ip = getenv("HTTP_CLIENT_IP");
+    else if(getenv("HTTP_X_FORWARDED_FOR"))
+        $ip = getenv("HTTP_X_FORWARDED_FOR");
+    else if(getenv("REMOTE_ADDR"))
+        $ip = getenv("REMOTE_ADDR");
+    else $ip = "Unknow";
+    return $ip;
+}

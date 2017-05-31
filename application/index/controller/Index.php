@@ -7,16 +7,14 @@
 */
 
 namespace app\index\controller;
-
 use \think\View;
 
-include('QueryList.php');
 
 class Index extends Common
 {
     public function index()
     {
-        define("CONSTANT", "Hello world.");//例子
+
         $view = new View();
         return $view->fetch('index');
     }

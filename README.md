@@ -192,13 +192,15 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 ### 1.3 本地新闻
 
 **必选参数:**
-  `name` 地名 如:广东省_深圳市，江西省_南昌市
+  `name` 地名 如:广东省_深圳市，江西省_南昌市  不填写获取当前默认地址
+  
+  `page` 分页 如0 10 20 30 每次返回10条数据
 
   **接口地址:**
-  `/News/local_news?name=广东省_深圳市`
+  `/News/local_news?name=广东省_深圳市&page=0`
 
   **调用例子:**
-  `http://localhost:8050/index.php/index/News/local_news?name=广东省_深圳市`
+  `http://localhost:8050/index.php/index/News/local_news?name=广东省_深圳市&page=0`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
   ```
