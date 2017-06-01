@@ -641,7 +641,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 
 
 
-### 6.1 每日前端开发日报列表
+### 6.1 单个日报列表
 
 **必选参数:**
       `$daily_id`  如：`20170520`  某个日期数
