@@ -194,7 +194,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 **必选参数:**
   `name` 地名 如:`广东省_深圳市`，`江西省_南昌市`  不填写获取你的定位默认地址
   
-  `page` 分页 如0 10 20 30 每次返回10条数据
+  `page` 分页 如0 从第0 条数据开始返回10条数据(最新的10条数据)   10 20 30 每次返回10条数据
 
   **接口地址:**
   `/News/local_news?name=广东省_深圳市&page=0`

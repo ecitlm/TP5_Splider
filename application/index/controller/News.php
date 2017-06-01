@@ -9,7 +9,6 @@ namespace app\index\controller;
 use think\Loader;
 class News
 {
-    const CM163 = 'http://c.m.163.com/nc/article';
     public function index()
     {
         return json([
@@ -23,9 +22,9 @@ class News
      */
     public function banner()
     {
-        $res = HttpGet(self::CM163."/headline/list/0-10.html?from=toutiao&passport=&devId");
+        $res = HttpGet(banner_url());
         $arr = json_decode($res, true);
-        return json($arr);
+        return json($arr['list'][0]);
     }
 
 
@@ -58,8 +57,7 @@ class News
                 'code' => 0
             ]);
         }
-        $url = self::CM163."/headline/" . $news_type . "/" . $page . "-10.html";
-        $res = HttpGet($url);
+        $res = HttpGet(new_list_url($news_type,$page));
         $arr = json_decode($res, true);
         return json([
             'msg' => 'success',
@@ -76,10 +74,8 @@ class News
      */
     public function new_detail($postid = "CLJMJRRL000181KT")
     {
-
         $id = (isset($_GET['postid'])) ? $_GET ['postid'] : "CLJMJRRL000181KT";
-        $url = self::CM163."/" . $id . "/full.html";
-        $res = HttpGet($url);
+        $res = HttpGet(new_detail_url($id));
         $arr = json_decode($res, true);
         return json([
             'msg' => 'success',
@@ -91,13 +87,11 @@ class News
 
     /**
      * 本地新闻
-     * @param string $name
      * @return \think\response\Json
      */
     public function local_news()
     {
-
-        $name = (isset($_GET['name'])) ? $_GET ['name'] : $this->get_address();
+        $name = (isset($_GET['name'])) ? $_GET ['name'] : $this->get_ip_address();
         $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 0;
         if (empty($name)) {
             return json([
@@ -105,9 +99,7 @@ class News
                 'code' => 0
             ]);
         }
-
-        $url = "http://3g.163.com/touch/jsonp/article/local/" . urlencode($name) . "/".$page."-10.html";
-        $res = HttpGet($url);
+        $res = HttpGet(local_news_url($name,$page));
         $arr = json_decode(substr($res, 9, -1), true);
         return json([
             'msg' => 'success',
@@ -117,20 +109,16 @@ class News
     }
 
 
-
-
-
-
-
-    public function get_address(){
+    /**
+     * 获取IP地址
+     * @return string
+     */
+    public function get_ip_address(){
         $getIp = getRemoteIPAddress();
-
         $content = file_get_contents("http://api.map.baidu.com/location/ip?ak=enYCQ2yaIIjL8IZfYdA1gi6hK2eqqI2T&ip={$getIp}&coor=bd09ll");
         $json = json_decode($content, true);
         $place=$json['content']['address_detail']['province']."_".$json['content']['address_detail']['city'];
-
         return $place;
-
     }
 
 }
