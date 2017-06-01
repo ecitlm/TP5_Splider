@@ -564,7 +564,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `page`  1,2,3  第一页第一二页日报列表当前日期一次往前走 
       
  **接口地址:**
-      `/Web/Weather/web_daily_list?page=1` 
+      `/Web/web_daily_list?page=1` 
       
   **调用例子:**
       `http://www.xxx.com/index.php/api/Web/web_daily_list?page=1`
@@ -647,7 +647,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `$daily_id`  如：`20170520`  某个日期数
       
  **接口地址:**
-      `/Web/Weather/every_daily_list?$daily_id=20170520` 
+      `/Web/every_daily_list?$daily_id=20170520` 
       
   **调用例子:**
       `http://www.xxx.com/index.php/api/Web/every_daily_list?$daily_id=20170520`
