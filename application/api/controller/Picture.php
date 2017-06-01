@@ -29,12 +29,21 @@ class Picture
     }
 
 
+
+    public function hua_ban(){
+        $url="http://huaban.com/favorite/beauty?j3ej14y9&max=1169063819&limit=20&wfl=1";
+        $res = HttpGet($url,true);
+        $arr = json_decode($res, true);
+        //http://img.hb.aicdn.com
+       return json($arr);
+
+    }
+
+
     public function down()
     {
-
-
         $url = "http://www.hbmeinv.com/index.php?m=Content&c=Index&a=gengduolist&p=2&catid=34";
-        $res = HttpGet($url);
+        $res = HttpGet($url,true);
         $arr = json_decode($res, true);
         foreach ($arr as $v){
             $this->download_image($v['thumb'],"/","splider_img",array('jpg', 'gif', 'png'),1);

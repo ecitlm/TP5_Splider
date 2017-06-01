@@ -1,6 +1,7 @@
 <?php
 
 // 应用公共文件
+
 /**
  * 获取用户ip
  * @return array|false|string
