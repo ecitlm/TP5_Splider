@@ -6,7 +6,7 @@
 * @Last Modified time: 2017-05-30 18:04:42
 */
 
-namespace app\index\controller;
+namespace app\api\controller;
 use \think\View;
 
 

@@ -6,7 +6,7 @@
  * Time: 19:02
  */
 
-namespace app\index\controller;
+namespace app\api\controller;
 
 class Common {
     function __construct(){

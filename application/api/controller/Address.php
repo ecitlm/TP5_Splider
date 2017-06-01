@@ -6,7 +6,7 @@
  * Time: 12:38
  */
 
-namespace app\index\controller;
+namespace app\api\controller;
 
 
 class Address

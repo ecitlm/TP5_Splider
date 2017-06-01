@@ -54,10 +54,10 @@ return [
     // | 模块设置
     // +----------------------------------------------------------------------
     // 允许访问的模块列表
-    //'MODULE_ALLOW_LIST'    =>array('index'),
+    'MODULE_ALLOW_LIST'    =>array('index','api'),
     
     // 默认模块名
-    'default_module'         => 'index',
+    'default_module'         => 'api',
     // 禁止访问模块
     'deny_module_list'       => ['common'],
     // 默认控制器名

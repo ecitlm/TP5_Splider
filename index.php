@@ -2,7 +2,7 @@
 
 header("Access-Control-Allow-Origin: *");
 //入口文件绑定模块名
-//define('BIND_MODULE','index');
+//define('BIND_MODULE','api');
 
 define('APP_PATH', __DIR__ . '/application/');
 // 加载框架引导文件

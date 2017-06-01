@@ -3,3 +3,4 @@ composer.lock
 *.log
 SocketLog.class.php
 slog.php
+splider_img

@@ -6,7 +6,7 @@
  * Time: 9:38
  */
 
-namespace app\index\controller;
+namespace app\api\controller;
 include('QueryList.php');
 
 class Web

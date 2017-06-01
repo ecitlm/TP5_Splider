@@ -6,7 +6,7 @@
  * Date: 2017/5/31
  * Time: 16:44
  */
-namespace app\index\controller;
+namespace app\api\controller;
 class Weather
 {
     /**

@@ -30,7 +30,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
    `News/banner`
 
    **调用例子:**
-   `http://localhost:8050/index.php/index/News/banner`
+   `http://localhost:8050/index.php/api/News/banner`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -70,7 +70,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
    `/News/new_list?type=1&page=20`
 
    **调用例子:**
-   `http://localhost:8050/index.php/index/News/new_list?type=1&page=20`
+   `http://localhost:8050/index.php/api/News/new_list?type=1&page=20`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -83,10 +83,10 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
     `postid` 新闻列表下的 postid
 
   **接口地址:**
-  `/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
+  `/index.php/api/News/new_detail?postid=CLJN5K2M000181KT`
 
   **调用例子:**
-  `http://localhost:8050/index.php/index/News/new_detail?postid=CLJN5K2M000181KT`
+  `http://localhost:8050/index.php/api/News/new_detail?postid=CLJN5K2M000181KT`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -200,7 +200,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
   `/News/local_news?name=广东省_深圳市&page=0`
 
   **调用例子:**
-  `http://localhost:8050/index.php/index/News/local_news?name=广东省_深圳市&page=0`
+  `http://localhost:8050/index.php/api/News/local_news?name=广东省_深圳市&page=0`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
   ```
@@ -254,7 +254,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
   `/Video/video_type?type=2&page=10`
   **调用例子:** 
   
-   `http://localhost:8050/index.php/index/Video/video_type?type=2&page=10`
+   `http://localhost:8050/index.php/api/Video/video_type?type=2&page=10`
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ``` javascript
 {
@@ -307,7 +307,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 `/Video/video_detail?vid=VEKKO9TJP`
 
 **调用例子:**
- `http://localhost:8050/index.php/index/Video/video_detail?vid=VEKKO9TJP`
+ `http://localhost:8050/index.php/api/Video/video_detail?vid=VEKKO9TJP`
  返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
  
 ```javascript
@@ -351,7 +351,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `/Joke/index?page=10`
       
  **调用例子:**
-      `http://localhost:8050/index.php/index/joke/index?page=10`
+      `http://localhost:8050/index.php/api/joke/index?page=10`
       返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
 {
@@ -397,7 +397,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `/Picture/index?page=20` 
       
   **调用例子:**
-      `http://localhost:8050/index.php/index/picture/index?page=20`
+      `http://localhost:8050/index.php/api/picture/index?page=20`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -470,7 +470,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `/Weather/get_weather?city=广州市` 
       
   **调用例子:**
-      `http://www.xxx.com/index.php/index/Weather/get_weather?city=广州市`
+      `http://www.xxx.com/index.php/api/Weather/get_weather?city=广州市`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -567,7 +567,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `/Web/Weather/web_daily_list?page=1` 
       
   **调用例子:**
-      `http://www.xxx.com/index.php/index/Web/web_daily_list?page=1`
+      `http://www.xxx.com/index.php/api/Web/web_daily_list?page=1`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -650,7 +650,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `/Web/Weather/every_daily_list?$daily_id=20170520` 
       
   **调用例子:**
-      `http://www.xxx.com/index.php/index/Web/every_daily_list?$daily_id=20170520`
+      `http://www.xxx.com/index.php/api/Web/every_daily_list?$daily_id=20170520`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
