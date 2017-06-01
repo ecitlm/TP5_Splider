@@ -219,10 +219,10 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
       `无`
       
   **接口地址:**
-      `/index`
+      `/Video/index`
       
- **调用例子:**
-      `http://localhost/index`
+ **调用例子:**  `http://localhost/index.php/api/Video/index`
+      
       返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
       ```
       ```
