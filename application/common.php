@@ -20,7 +20,7 @@ function HttpGet($url,$status=false){
     curl_setopt ( $curl, CURLOPT_URL, $url);
     curl_setopt ( $curl, CURLOPT_RETURNTRANSFER, true );
     curl_setopt ( $curl, CURLOPT_TIMEOUT,1000 );
-    //curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36');
+    curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36');
 
     if($status){
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

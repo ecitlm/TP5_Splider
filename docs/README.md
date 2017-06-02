@@ -386,7 +386,7 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 
 ## 4. 图片相册接口
 
-说明: 包括 视频首页数据、视频分类列表 视频详情、如下详情：
+说明: 包括 Cosplay相册、花瓣相册：
 
 ### 4.1 cosplay 相册
 
@@ -454,7 +454,37 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 
 ```
 
+### 4.2 花瓣照片相册
 
+**必选参数:**
+      `无`   每次生成20条随机数据
+      
+ **接口地址:**
+      `/Picture/hua_ban` 
+      
+  **调用例子:**
+      `http://localhost:8050/index.php/api/Picture/hua_ban`
+      
+返回数据(每次返回是20条数据,这里就不全部列出来了)如下图:
+```javascript
+{
+    "msg": "success",
+    "code": 1,
+    "data": [
+        {
+            "img": "http://img.hb.aicdn.com/623a6284b7fb7cc297bfadaf101a07677817136543f3a-ksxY2x",
+            "title": "小清新女生",
+            "desc": "唯美气息"
+        },
+        
+        {
+            "img": "http://img.hb.aicdn.com/1130866c1c6b90456f0488d2d42279740740c97d6d805-DHmPo2",
+            "title": "小清新女生",
+            "desc": "唯美气息"
+        }
+    ]
+}
+```
 
 
 ## 5. 天气预报
