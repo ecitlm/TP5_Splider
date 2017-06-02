@@ -93,12 +93,8 @@ class News
     {
         $name = (isset($_GET['name'])) ? $_GET ['name'] : $this->get_ip_address();
         $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 0;
-        if (empty($name)) {
-            return json([
-                'msg' => '请填写正确的请求参数',
-                'code' => 0
-            ]);
-        }
+
+
         $res = HttpGet(local_news_url($name,$page));
         $arr = json_decode(substr($res, 9, -1), true);
         return json([

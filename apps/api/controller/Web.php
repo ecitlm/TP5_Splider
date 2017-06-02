@@ -66,7 +66,7 @@ class Web
     public function every_daily_list()
     {
 
-        $daily_id = (isset($_GET['daily_id'])) ? intval($_GET ['daily_id']) : "20170520";
+        $daily_id = (isset($_GET['daily_id'])) ? intval($_GET ['daily_id']) : "20170531";
         $url = "http://caibaojian.com/fe-daily-{$daily_id}.html";
         $data = Http_Spider($url);
         \phpQuery::newDocumentHTML($data);

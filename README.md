@@ -12,11 +12,33 @@ TP5_Splider
 ·
 
 > ThinkPHP5的运行环境要求PHP5.4以上。
-## 安装
+## 下载
 
 ```
 git clone  https://github.com/ecitlm/TP5_Splider.git
+
 ```
+
+Apache 下载部署之后配置隐藏入口文件index.php
+.htaccess
+```
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>
+```
+httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配置
+```apacheconfig
+  #LoadModule rewrite_module modules/mod_rewrite.so把前面的警号去掉
+  AllowOverride none  改   AllowOverride ALL
+
+  
+```
+
+
 
 ## 1. 新闻模块
 
