@@ -4,3 +4,4 @@ composer.lock
 SocketLog.class.php
 slog.php
 splider_img
+.gitignore
