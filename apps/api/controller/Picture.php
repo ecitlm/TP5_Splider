@@ -43,10 +43,14 @@ class Picture
             $tmp = array(
                 'img' => "http://img.hb.aicdn.com/" . $k['file']['key'],
                 'title' => $k['board']['title'],
-                'desc' => $k['board']['description']
+                'desc' => $k['board']['description'],
+                'like' => $k['like_count'],
+                'repin_count'=> $k['repin_count']
             );
             array_push($arr, $tmp);
         }
+
+        //return json($query['pins']);
 
         return json([
             'msg' => 'success',
