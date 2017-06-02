@@ -20,7 +20,8 @@ git clone  https://github.com/ecitlm/TP5_Splider.git
 ```
 
 Apache 下载部署之后配置隐藏入口文件index.php
-.htaccess
+
+根目录下 .htaccess
 ```
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
