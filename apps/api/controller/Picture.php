@@ -32,8 +32,6 @@ class Picture
 
     public function hua_ban()
     {
-
-
         $url = "http://huaban.com/favorite/beauty?j3ej14y9&max=116".$this->get_random(7)."&limit=20&wfl=1";
         $res = HttpGet($url, true);
         $query = json_decode($res, true);
@@ -58,6 +56,29 @@ class Picture
             'data' => $arr
         ]);
 
+    }
+
+
+    public function hbmv(){
+        $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 1;
+        $type = (isset($_GET['type'])) ? intval($_GET ['type']) : 34;
+        $url = "http://www.hbmeinv.com/index.php?m=Content&c=Index&a=gengduolist&p={$page}&catid={$type}";
+        $res = HttpGet($url);
+
+        $query = json_decode($res, true);
+        $arr = array();
+        foreach ($query as &$k) {
+            $tmp = array(
+            'title' =>$k['title'],
+            'thumb' =>$k['thumb']
+            );
+            array_push($arr, $tmp);
+        }
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => $arr
+        ]);
     }
 
 
