@@ -697,13 +697,13 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
 ### 6.2 单个日报列表
 
 **必选参数:**
-      `$daily_id`  如：`20170520`  某个日期数
+      `daily_id`  如：`20170520`  某个日期数
       
  **接口地址:**
-      `/Web/every_daily_list?$daily_id=20170520` 
+      `/Web/every_daily_list?daily_id=20170530` 
       
   **调用例子:**
-      `http://www.xxx.com/index.php/api/Web/every_daily_list?$daily_id=20170520`
+      `http://www.xxx.com/index.php/api/Web/every_daily_list?$daily_id=20170530`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
