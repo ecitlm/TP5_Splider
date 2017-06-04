@@ -35,13 +35,14 @@ class News
     public function new_list()
     {
 
-        $type = (isset($_GET['type'])) ? intval($_GET ['type']) : 0;
-        $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 10;
 
+       $type = (isset($_POST['type'])) ? intval($_POST ['type']) : 0;
+       $page = (isset($_POST['page'])) ? intval($_POST ['page']) : 10;
         $data = [
             'page' => $page,
             'type' =>$type,
         ];
+
         $validate = Loader::validate('News');
         if(!$validate->check($data)){
             return json([
