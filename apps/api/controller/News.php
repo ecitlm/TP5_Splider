@@ -105,6 +105,21 @@ class News
         ]);
     }
 
+	/**
+	*微信精选
+	*
+	*/
+	public function wx_select(){
+		$ps = (isset($_GET['ps'])) ? intval($_GET ['ps']) : 10;
+		$jkAPikey="d046cd1f569ed13d951f0258902ef9b2";
+		$url="http://v.juhe.cn/weixin/query?key=d046cd1f569ed13d951f0258902ef9b2&ps=".$ps;
+		$res=HttpGet($url);
+		return  $res;
+	
+	
+	
+	}
+
 
     /**
      * 获取IP地址
