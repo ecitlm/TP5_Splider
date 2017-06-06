@@ -922,3 +922,159 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
     }
 }
 ```
+
+
+## 8. 豆瓣热播电影
+
+说明: 获取热播电影列表、电影详情
+
+### 8.1 热播电影列表
+
+**必选参数:**
+      `start`   开始数0. 9 18 
+      
+      `count` 返回列表数
+      
+      
+ **接口地址:**
+      `/Movie/playing_movie_list?start=0&count=9` 
+      
+  **调用例子:**
+      `http://www.xxx.com/index.php/api//Movie/playing_movie_list?start=0&count=9`
+      
+返回数据(每次返回数据,这里就不全部列出来了)如下图:
+```json
+{
+    "msg": "success",
+    "code": 1,
+    "data": {
+        "rating": {
+            "max": 10,
+            "average": 7.4,
+            "stars": "40",
+            "min": 0
+        },
+        "reviews_count": 937,
+        "wish_count": 36862,
+        "douban_site": "",
+        "year": "2017",
+        "images": {
+            "small": "http://img7.doubanio.com/view/movie_poster_cover/ipst/public/p2459723975.jpg",
+            "large": "http://img7.doubanio.com/view/movie_poster_cover/lpst/public/p2459723975.jpg",
+            "medium": "http://img7.doubanio.com/view/movie_poster_cover/spst/public/p2459723975.jpg"
+        },
+        "alt": "https://movie.douban.com/subject/6311303/",
+        "id": "6311303",
+        "mobile_url": "https://movie.douban.com/subject/6311303/mobile",
+        "title": "加勒比海盗5：死无对证",
+        "do_count": null,
+        "share_url": "http://m.douban.com/movie/subject/6311303",
+        "seasons_count": null,
+        "schedule_url": "https://movie.douban.com/subject/6311303/cinema/",
+        "episodes_count": null,
+        "countries": [
+            "美国"
+        ],
+        "genres": [
+            "动作",
+            "奇幻",
+            "冒险"
+        ],
+        "collect_count": 109318,
+        "casts": [
+            {
+                "alt": "https://movie.douban.com/celebrity/1054456/",
+                "avatars": {
+                    "small": "http://img7.doubanio.com/img/celebrity/small/562.jpg",
+                    "large": "http://img7.doubanio.com/img/celebrity/large/562.jpg",
+                    "medium": "http://img7.doubanio.com/img/celebrity/medium/562.jpg"
+                },
+                "name": "约翰尼·德普",
+                "id": "1054456"
+            },
+            {
+                "alt": "https://movie.douban.com/celebrity/1054414/",
+                "avatars": {
+                    "small": "http://img3.doubanio.com/img/celebrity/small/587.jpg",
+                    "large": "http://img3.doubanio.com/img/celebrity/large/587.jpg",
+                    "medium": "http://img3.doubanio.com/img/celebrity/medium/587.jpg"
+                },
+                "name": "哈维尔·巴登",
+                "id": "1054414"
+            },
+            {
+                "alt": "https://movie.douban.com/celebrity/1010543/",
+                "avatars": {
+                    "small": "http://img7.doubanio.com/img/celebrity/small/1243.jpg",
+                    "large": "http://img7.doubanio.com/img/celebrity/large/1243.jpg",
+                    "medium": "http://img7.doubanio.com/img/celebrity/medium/1243.jpg"
+                },
+                "name": "杰弗里·拉什",
+                "id": "1010543"
+            },
+            {
+                "alt": "https://movie.douban.com/celebrity/1325896/",
+                "avatars": {
+                    "small": "http://img7.doubanio.com/img/celebrity/small/1410910563.02.jpg",
+                    "large": "http://img7.doubanio.com/img/celebrity/large/1410910563.02.jpg",
+                    "medium": "http://img7.doubanio.com/img/celebrity/medium/1410910563.02.jpg"
+                },
+                "name": "布伦顿·思韦茨",
+                "id": "1325896"
+            }
+        ],
+        "current_season": null,
+        "original_title": "Pirates of the Caribbean: Dead Men Tell No Tales",
+        "summary": "故事发生在《加勒比海盗3：世界的尽头》沉船湾之战20年后。男孩亨利（布兰顿·思怀兹 Brenton Thwaites 饰）随英国海军出航寻找被聚魂棺诅咒的父亲“深海阎王”威尔·特纳（奥兰多·布鲁姆 Orlando Bloom 饰），却在百慕大三角遭遇被解封的亡灵萨拉查船长（哈维尔·巴登 Javier Bardem 饰）。获取自由的萨拉查屠尽加勒比海盗，征服了整个海域。里海海盗王赫克托·巴博萨船长（杰弗里·拉什 Geoffrey Rush 饰）在女巫Haifaa Meni（格什菲·法拉哈尼 Golshifteh Farahani 饰）口中得知了萨拉查的真实目的：为寻找他的宿敌杰克船长（约翰尼·德普 Johnny Depp 饰）。海盗的命运皆压在落魄的老杰克被封印的黑珍珠号，以及天文学家卡琳娜·史密斯（卡雅·斯考达里奥 Kaya Scodelario 饰）口中的远古三叉戟上。",
+        "subtype": "movie",
+        "directors": [
+            {
+                "alt": "https://movie.douban.com/celebrity/1019391/",
+                "avatars": {
+                    "small": "http://img7.doubanio.com/img/celebrity/small/58032.jpg",
+                    "large": "http://img7.doubanio.com/img/celebrity/large/58032.jpg",
+                    "medium": "http://img7.doubanio.com/img/celebrity/medium/58032.jpg"
+                },
+                "name": "艾斯彭·山德伯格",
+                "id": "1019391"
+            },
+            {
+                "alt": "https://movie.douban.com/celebrity/1216851/",
+                "avatars": {
+                    "small": "http://img7.doubanio.com/img/celebrity/small/58031.jpg",
+                    "large": "http://img7.doubanio.com/img/celebrity/large/58031.jpg",
+                    "medium": "http://img7.doubanio.com/img/celebrity/medium/58031.jpg"
+                },
+                "name": "乔阿吉姆·罗恩尼",
+                "id": "1216851"
+            }
+        ],
+        "comments_count": 47631,
+        "ratings_count": 101974,
+        "aka": [
+            "加勒比海盗：恶灵启航(港)",
+            "加勒比海盗 神鬼奇航：死无对证(台)",
+            "加勒比海盗5：亡灵的缄默",
+            "加勒比海盗5：亡者无言",
+            "加勒比海盗5：死人不会告密",
+            "Pirates of the Caribbean 5"
+        ]
+    }
+}
+```
+
+
+### 8.2 热播电影详情
+
+**必选参数:**
+      `id`   电影 `id` 
+      
+      
+      
+ **接口地址:**
+      `/Movie/movie_info?id=6311303` 
+      
+  **调用例子:**
+      `http://www.xxx.com/index.php/api/Movie/movie_info?id=6311303`
+      
+返回数据(每次返回数据,这里就不全部列出来了)如下图:
