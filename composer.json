@@ -26,12 +26,14 @@
         "topthink/think-worker": "^1.0",
         "topthink/think-helper": "^1.0",
         "topthink/think-queue": "^1.0",
-        "topthink/think-angular": "^1.0"
+        "topthink/think-angular": "^1.0",
+        "weiwei/api-doc": "dev-maste"
     },
     "extra": {
         "think-path": "thinkphp"
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "secure-http": false
     }
 }

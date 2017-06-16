@@ -24,7 +24,6 @@ class Address
 
         $address = file_get_contents("http://api.map.baidu.com/geocoder/v2/?ak=enYCQ2yaIIjL8IZfYdA1gi6hK2eqqI2T&location={$latitude_longitude}&output=json&pois=0");
 
-        //return $address;
 
         $arr= json_decode($address, true);
 

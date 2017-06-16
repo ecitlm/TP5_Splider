@@ -21,7 +21,11 @@ class Weather
             $city= $this->get_city();
         }
         $res = file_get_contents("http://api.map.baidu.com/telematics/v3/weather?location={$city}&output=json&ak=32da004455c52b48d84a3a484c0dbc99");
-        return $res;
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => json_decode($res, true)
+        ]);
     }
 
     protected function get_city(){
