@@ -95,8 +95,7 @@ class News
         $name = (isset($_GET['name'])) ? $_GET ['name'] : $this->get_ip_address();
         $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 0;
 
-
-        $res = HttpGet(local_news_url($name,$page));
+        $res = HttpGet(local_news_url(urlencode($name),$page));
         $arr = json_decode(substr($res, 9, -1), true);
         return json([
             'msg' => 'success',

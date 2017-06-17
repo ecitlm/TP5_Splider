@@ -77,7 +77,7 @@ function new_detail_url($id){
  * @return string
  */
  function local_news_url($name,$page){
-    $url="http://3g.163.com/touch/jsonp/article/local/" .$name . "/".$page."-10.html";
+    $url="http://3g.163.com/touch/jsonp/article/local/{$name}/{$page}-10.html";
     return $url;
 }
 

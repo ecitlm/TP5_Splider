@@ -13,7 +13,7 @@ class Video
      */
     public function index()
     {
-        $res = HttpGet("http://c.3g.163.com/nc/video/home/10-10.html");
+        $res = HttpGet("http://c.3g.163.com/nc/video/home/0-10.html");
         $arr = json_decode($res, true);
         return json([
             'msg' => 'success',
