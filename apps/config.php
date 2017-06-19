@@ -54,7 +54,7 @@ return [
     // | 模块设置
     // +----------------------------------------------------------------------
     // 允许访问的模块列表
-    'MODULE_ALLOW_LIST'    =>array('index','api'),
+    'MODULE_ALLOW_LIST'    =>array('index','api','wx'),
     
     // 默认模块名
     'default_module'         => 'api',

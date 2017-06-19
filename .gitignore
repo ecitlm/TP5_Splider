@@ -5,3 +5,5 @@ SocketLog.class.php
 slog.php
 splider_img
 .gitignore
+apps/wx/
+apps/wx
