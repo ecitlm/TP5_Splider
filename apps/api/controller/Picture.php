@@ -32,7 +32,7 @@ class Picture
 
     public function hua_ban()
     {
-        $url = "http://huaban.com/favorite/beauty?j3ej14y9&max=116".$this->get_random(7)."&limit=20&wfl=1";
+        $url = "http://huaban.com/favorite/beauty?j3ej14y9&max=11".$this->get_random(8)."&limit=20&wfl=1";
         $res = HttpGet($url, true);
         $query = json_decode($res, true);
 
