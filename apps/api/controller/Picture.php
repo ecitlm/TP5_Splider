@@ -82,6 +82,12 @@ class Picture
     }
 
 
+
+
+
+
+
+
     /**
      * 生成随机数
      * @param $len
@@ -103,5 +109,7 @@ class Picture
         }
         return $outputstr;
     }
+
+
 
 }
