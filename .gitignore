@@ -7,3 +7,4 @@ splider_img
 .gitignore
 apps/wx/
 apps/wx
+runtime/*

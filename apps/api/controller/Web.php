@@ -73,7 +73,7 @@ class Web
         $arr = array();
         $list = pq('.feddaily-list li');
 
-        $every_daily_title=pq('.entry-title a')->text();
+        $every_daily_title = pq('.entry-title a')->text();
         foreach ($list as $li) {
             $title = pq($li)->find('.fed-title a')->text();
             $desc = pq($li)->find('.fed-con')->text();
@@ -90,8 +90,19 @@ class Web
         return json([
             'msg' => 'success',
             'code' => 1,
-            'title'=>$every_daily_title,
+            'title' => $every_daily_title,
             'data' => $arr
         ]);
     }
+
+
+    public function frame()
+    {
+        $url = "http://orz7qm1c9.bkt.clouddn.com/frame.html";
+        $data = Http_Spider($url);
+        return $data;
+
+    }
+
+
 }

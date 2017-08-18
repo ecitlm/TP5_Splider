@@ -45,6 +45,7 @@ class Splider
 
     public function osc(){
         $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 1;
+       // $id = (isset($_GET['id'])) ? intval($_GET ['id']) : 1;
         $url="https://my.oschina.net/u/2921900/home?type=tweet&scope=all&showme=NOTSHOW&p={$page}&temp=1500024889206";
         $res = HttpGet($url);
         \phpQuery::newDocumentHTML($res);
@@ -53,8 +54,6 @@ class Splider
 
         foreach ($list as $li) {
             $img = pq($li)->attr('data-raw-img');
-
-
             $tmp = array(
                 'img' => $img
             );
@@ -66,8 +65,6 @@ class Splider
             'data' => $arr
         ]);
 
-
-        //tweet-img
     }
 
 
