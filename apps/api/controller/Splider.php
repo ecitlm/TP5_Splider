@@ -45,7 +45,7 @@ class Splider
 
     public function osc(){
         $page = (isset($_GET['page'])) ? intval($_GET ['page']) : 1;
-        $url="https://my.oschina.net/u/2921900/home?type=tweet&scope=all&showme=NOTSHOW&p={$page}&temp=1500024889206";
+        $url="https://my.oschina.net/Katyhu/home?type=tweet&scope=all&showme=NOTSHOW&p={$page}&temp=1500024889206";
         $res = HttpGet($url);
         \phpQuery::newDocumentHTML($res);
         $arr = array();
