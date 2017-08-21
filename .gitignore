@@ -7,6 +7,10 @@ splider_img
 .gitignore
 apps/wx/
 apps/wx
+<<<<<<< HEAD
 payInterface_native/
 payInterface_native/*
 payInterface_native
+=======
+runtime/*
+>>>>>>> 1c834552a00119bbd52a8c11dccedf3e21dcc97a

@@ -1,4 +1,4 @@
-TP5_Splider
+TP5_Splider Api
 ===============
 
 
@@ -11,7 +11,7 @@ TP5_Splider
  + 段子笑话接口
 ·
 
-> ThinkPHP5的运行环境要求PHP5.4以上。
+> ThinkPHP5的运行环境要求PHP5.4 以上。
 ## 下载
 
 ```
