@@ -12,9 +12,10 @@ TP5_Splider Api
 ·
 
 > ThinkPHP5的运行环境要求PHP5.4 以上。
+
 ## 下载
 
-```
+```shell
 git clone  https://github.com/ecitlm/TP5_Splider.git
 
 ```
