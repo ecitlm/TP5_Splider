@@ -1,7 +1,6 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: cnmobi
  * Date: 2017/6/1
  * Time: 9:38
  */
