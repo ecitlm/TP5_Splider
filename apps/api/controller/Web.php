@@ -1,7 +1,6 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: cnmobi
  * Date: 2017/6/1
  * Time: 9:38
  */
@@ -40,15 +39,17 @@ class Web extends  Base
         foreach ($list as $li) {
             $title = pq($li)->find('.entry-title span')->text();
             $desc = pq($li)->find('.entry-content p')->text();
-            $url = pq($li)->find('.read-more')->attr('href');
+            $url = pq($li)->find('.entry-title a')->attr('href');
             $date = pq($li)->find('.entry-date')->text();
             $id = intval(preg_replace('/\D/s', '', $url));
+
 
             $tmp = array(
                 'title' => $title,
                 'date' => $date,
                 'desc' => $desc,
-                'daily_id' => $id
+                'daily_id' => $id,
+                'url'=>$url
             );
             array_push($arr, $tmp);
         }
