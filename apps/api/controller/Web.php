@@ -9,7 +9,7 @@
 namespace app\api\controller;
 include('QueryList.php');
 
-class Web
+class Web extends  Base
 {
 
     public function index()
