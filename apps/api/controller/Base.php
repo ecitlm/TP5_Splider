@@ -17,6 +17,9 @@ class Base
         $this->checkSign();
     }
 
+    /**
+     * 校验签名
+     */
     public function checkSign()
     {
         $params = $_REQUEST;
@@ -26,6 +29,7 @@ class Base
                 'msg' => '缺少Sign参数',
                 'code' => 999
             ));
+            die();
         }else{
             $responseSign = $params['sign'];
             $params['appkey'] = config('appkey');
