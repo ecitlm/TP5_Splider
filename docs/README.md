@@ -55,7 +55,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
    `News/banner`
 
    **调用例子:**
-   `http://localhost:8050/index.php/api/News/banner`
+   `http://ip/index.php/api/News/banner`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -95,7 +95,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
    `/News/new_list?type=1&page=20`
 
    **调用例子:**
-   `http://localhost:8050/index.php/api/News/new_list?type=1&page=20`
+   `http://ip/index.php/api/News/new_list?type=1&page=20`
 
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 
@@ -111,7 +111,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
   `/index.php/api/News/new_detail?postid=CLJN5K2M000181KT`
 
   **调用例子:**
-  `http://localhost:8050/index.php/api/News/new_detail?postid=CLJN5K2M000181KT`
+  `http://ip/index.php/api/News/new_detail?postid=CLJN5K2M000181KT`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -225,7 +225,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
   `/News/local_news?name=广东省_深圳市&page=0`
 
   **调用例子:**
-  `http://localhost:8050/index.php/api/News/local_news?name=广东省_深圳市&page=0`
+  `http://ip/index.php/api/News/local_news?name=广东省_深圳市&page=0`
 
   返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
   ```
@@ -279,7 +279,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
   `/Video/video_type?type=2&page=10`
   **调用例子:** 
   
-   `http://localhost:8050/index.php/api/Video/video_type?type=2&page=10`
+   `http://ip/index.php/api/Video/video_type?type=2&page=10`
    返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ``` javascript
 {
@@ -332,7 +332,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
 `/Video/video_detail?vid=VEKKO9TJP`
 
 **调用例子:**
- `http://localhost:8050/index.php/api/Video/video_detail?vid=VEKKO9TJP`
+ `http://ip/index.php/api/Video/video_detail?vid=VEKKO9TJP`
  返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
  
 ```javascript
@@ -376,7 +376,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
       `/Joke/index?page=10`
       
  **调用例子:**
-      `http://localhost:8050/index.php/api/joke/index?page=10`
+      `http://ip/index.php/api/joke/index?page=10`
       返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
 {
@@ -422,7 +422,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
       `/Picture/index?page=20` 
       
   **调用例子:**
-      `http://localhost:8050/index.php/api/picture/index?page=20`
+      `http://ip/index.php/api/picture/index?page=20`
       
 返回数据(每次返回是10条数据,这里就不全部列出来了)如下图:
 ```javascript
@@ -488,7 +488,7 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
       `/Picture/hua_ban` 
       
   **调用例子:**
-      `http://localhost:8050/index.php/api/Picture/hua_ban`
+      `http://ip/index.php/api/Picture/hua_ban`
       
 返回数据(每次返回是20条数据,这里就不全部列出来了)如下图:
 ```javascript
