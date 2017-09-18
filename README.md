@@ -10,7 +10,8 @@ TP5_Splider Api
  + 图片(cosplay)、美图相册接口
  + 段子笑话接口
  + 天气预报
-  + 酷狗音乐web端api
+ + 酷狗音乐web端api
+ + base 类添加接口签名校验
 ·
 
 > ThinkPHP5的运行环境要求PHP5.4 以上。
