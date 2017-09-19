@@ -26,7 +26,7 @@ class Base
                 'code' => 999
             ));
             die();
-        }else{
+        }else {
             $responseSign = $params['sign'];
             $params['appkey'] = config('appkey');
             unset($params['sign']);
