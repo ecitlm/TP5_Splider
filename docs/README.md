@@ -1080,3 +1080,83 @@ httpd.conf配置文件中加载了mod_rewrite.so模块  //在APACHE里面去配�
       `http://www.xxx.com/index.php/api/Movie/movie_info?id=6311303`
       
 返回数据(每次返回数据,这里就不全部列出来了)如下图:
+
+
+## 9. 招聘信息
+
+说明: 获取招聘信息如 web开发工程师、php
+
+### 8.1 招聘
+**必选参数:**
+      `type`    web/php/java/
+      `pageNo`  第几页
+       **接口地址:**
+            `/Job/index?type=web&pageNo=1`  
+        **调用例子:**
+```javascript
+[
+    {
+        "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+        },
+        "positionId": 3640855,
+        "positionName": "C#高级程序员",
+        "city": "深圳",
+        "createTime": "今天 21:30",
+        "salary": "12k-24k",
+        "companyId": 78807,
+        "companyLogo": "i/image/M00/54/9A/CgpEMll5Y4mAJauzAAAMiJRL3j8068.png",
+        "companyName": "牛日科技",
+        "companyFullName": "深圳牛日科技有限公司"
+    },
+    {
+        "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+        },
+        "positionId": 3640847,
+        "positionName": "android APP 开发",
+        "city": "深圳",
+        "createTime": "今天 21:22",
+        "salary": "10K-12K",
+        "companyId": 262842,
+        "companyLogo": "images/logo_default.png",
+        "companyName": "视通技术",
+        "companyFullName": "深圳市易联视通技术有限公司"
+    },
+    {
+        "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+        },
+        "positionId": 3203178,
+        "positionName": "PHP 高级工程师",
+        "city": "深圳",
+        "createTime": "今天 21:20",
+        "salary": "20k-35k",
+        "companyId": 7628,
+        "companyLogo": "image1/M00/00/10/Cgo8PFTUWC2AORIjAABLYZ6NxjQ933.png",
+        "companyName": "点指传媒",
+        "companyFullName": "武汉点指文化传播有限公司"
+    },
+    {
+        "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+        },
+        "positionId": 2922125,
+        "positionName": "客服",
+        "city": "深圳",
+        "createTime": "今天 21:14",
+        "salary": "4k-6k",
+        "companyId": 108831,
+        "companyLogo": "i/image/M00/01/0C/Cgp3O1ZenZ6AefB-AAAFVRgugjY295.jpg",
+        "companyName": "爱易收",
+        "companyFullName": "深圳市易收电子商务有限公司"
+    }
+    ]
+
+```
+
+            
