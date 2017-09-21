@@ -21,13 +21,17 @@ class Job{
         ]);
     }
 
+    /**
+     * @return \think\response\Json
+     * 得到工作岗位的详细信息
+     */
     public  function  dedtail(){
         $positionId = (isset($_GET['positionId'])) ? $_GET ['positionId'] : "2662779";
         $url="https://m.lagou.com/jobs/{$positionId}.html";
         $res = HttpGet($url);
         \phpQuery::newDocumentHTML($res);
         $result=array(
-            'title'=>pq('.title')->text(),
+            'title'=>pq('.postitle')->find('.title')->text(),
             "content"=>pq('.content')->html(),
             'salary'=>pq('.salary')->find('.text')->html(),
             'workyear'=>pq('.workyear')->find('.text')->text(),
