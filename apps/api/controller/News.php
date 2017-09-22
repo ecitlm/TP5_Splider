@@ -36,8 +36,8 @@ class News
     {
 
 
-       $type = (isset($_POST['type'])) ? intval($_POST ['type']) : 0;
-       $page = (isset($_POST['page'])) ? intval($_POST ['page']) : 10;
+       $type = (isset($_REQUEST['type'])) ? intval($_REQUEST['type']) : 0;
+       $page = (isset($_REQUEST['page'])) ? intval($_REQUEST['page']) : 10;
         $data = [
             'page' => $page,
             'type' =>$type,
@@ -50,7 +50,6 @@ class News
                 'code' => 0,
             ]);
         }
-
         $news_type = \think\Config::get("news")['news_type'][$type];
         if (empty($news_type)) {
             return json([
