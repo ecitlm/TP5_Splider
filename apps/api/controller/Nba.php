@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-26 22:42:12
+ * @Last Modified time: 2017-10-26 22:50:02
  */
 
 namespace app\api\controller;
@@ -27,6 +27,27 @@ class Nba
             'data' => $res['schedule@getList']
         ]);
     
+    }
+
+
+	/**
+	 * [live_detail 比赛直播详情信息]
+	 * @return [type] [description]
+	 */
+    public function live_detail(){
+
+    	$schid = (isset($_GET['schid'])) ? $_GET ['schid'] : "1470215";
+    	$liveid = (isset($_GET['liveid'])) ? $_GET ['liveid'] : "2009587";
+    	$res = HttpGet("https://nb.3g.qq.com/nba/api/live@getInfo?i_schid={$schid}&i_liveid={$liveid}");
+    	$res = json_decode($res,true);
+    	return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => $res['live@getInfo']
+        ]);
+
+    	
+
     }
     /**
      * 转发图片
