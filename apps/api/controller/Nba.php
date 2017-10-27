@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-27 23:37:56
+ * @Last Modified time: 2017-10-27 23:40:16
  */
 
 namespace app\api\controller;
@@ -72,7 +72,7 @@ class Nba
         return json([
             'msg' => 'success',
             'code' => 1,
-            'data' => json_decode($res, true)['live_stat_4_nba']['playStat']
+            'data' => json_decode($res, true)['live_stat_4_nba']
         ]);
     }
 
