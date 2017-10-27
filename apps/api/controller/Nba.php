@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-27 21:22:08
+ * @Last Modified time: 2017-10-27 23:37:56
  */
 
 namespace app\api\controller;
@@ -68,7 +68,7 @@ class Nba
     {
 
         $schid = (isset($_GET['schid'])) ? $_GET ['schid'] : "1470215";
-        $res = HttpGet("https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=live_stat_4_nba%2Cbroadcast_info&sch_id={$schid}");
+        $res = HttpGet("https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=live_stat_4_nba%2Cbroadcast_info&sch_id={$schid}&bid=2009605");
         return json([
             'msg' => 'success',
             'code' => 1,
