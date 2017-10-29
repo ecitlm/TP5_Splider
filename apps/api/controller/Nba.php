@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-27 23:40:16
+ * @Last Modified time: 2017-10-29 11:23:39
  */
 
 namespace app\api\controller;
@@ -74,6 +74,18 @@ class Nba
             'code' => 1,
             'data' => json_decode($res, true)['live_stat_4_nba']
         ]);
+    }
+
+    public function  player_detail(){
+
+        $playerid = (isset($_GET['playerid'])) ? $_GET ['playerid'] : "4130";
+        $res = HttpGet("https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=player_detail&playerId={$playerid}&sid=");
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => json_decode($res, true)['player_detail']
+        ]);
+
     }
 
     /**
