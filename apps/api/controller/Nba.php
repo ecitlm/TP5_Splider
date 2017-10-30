@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-29 11:23:39
+ * @Last Modified time: 2017-10-30 23:05:04
  */
 
 namespace app\api\controller;
@@ -113,6 +113,19 @@ class Nba
             'data' => json_decode($res, true)['team_detail']
         ]);
 
+    }
+
+    /**
+     * 球队阵容
+     */
+    public function Lineup(){
+        $id = (isset($_GET['teamId'])) ? $_GET ['teamId'] : "24";
+        $res = HttpGet("https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=team_player&teamId={$id}&sid=");
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => json_decode($res, true)['team_detail']
+        ]);
     }
 
 
