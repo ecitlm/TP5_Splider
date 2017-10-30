@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-30 23:05:04
+ * @Last Modified time: 2017-10-30 23:18:36
  */
 
 namespace app\api\controller;
@@ -124,11 +124,9 @@ class Nba
         return json([
             'msg' => 'success',
             'code' => 1,
-            'data' => json_decode($res, true)['team_detail']
+            'data' => json_decode($res, true)['team_player']['players']
         ]);
     }
-
-
 
 
     /**
