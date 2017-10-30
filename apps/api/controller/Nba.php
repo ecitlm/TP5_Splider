@@ -77,7 +77,6 @@ class Nba
     }
 
     public function  player_detail(){
-
         $playerid = (isset($_GET['playerid'])) ? $_GET ['playerid'] : "4130";
         $res = HttpGet("https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=player_detail&playerId={$playerid}&sid=");
         return json([
@@ -87,6 +86,37 @@ class Nba
         ]);
 
     }
+
+    /**
+     * @return \think\response\Json
+     * 联盟排名
+     */
+    public function team_rank(){
+        $res = HttpGet("https://matchweb.sports.qq.com/rank/team?columnId=100000&from=NBA");
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => json_decode($res, true)[1]
+        ]);
+    }
+
+    /**
+     * @return \think\response\Json
+     * 球队详情
+     */
+    public function team_info(){
+        $id = (isset($_GET['teamId'])) ? $_GET ['teamId'] : "24";
+        $res = HttpGet("https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=team_detail&teamId={$id}&sid=");
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => json_decode($res, true)['team_detail']
+        ]);
+
+    }
+
+
+
 
     /**
      * 转发图片
