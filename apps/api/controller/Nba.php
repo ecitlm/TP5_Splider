@@ -130,6 +130,39 @@ class Nba
 
 
     /**
+     * @return \think\response\Json
+     * 网易NBA新闻列表
+     */
+    public function new_list(){
+        $page  = (isset($_GET['page  '])) ? $_GET ['page  '] : "0";
+        $page= $page *15;
+        $res = HttpGet("https://3g.163.com/touch/reconstruct/article/list/BD2AQH4Qwangning/{$page}-10.html");
+        //$arr = json_decode(substr($res, 10, -1), true);
+
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => json_decode(substr($res, 9, -1), true)['BD2AQH4Qwangning']
+        ]);
+    }
+
+    /**
+     * @return \think\response\Json
+     * 网易NBA新闻详情
+     */
+    public  function news_info(){
+        $id = (isset($_GET['docid'])) ? $_GET ['docid'] : "D22DCS5S0005877U";
+        $res = HttpGet("http://3g.163.com/touch/article/{$id}/full.html");
+        $arr = json_decode(substr($res, 12, -1), true);
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => $arr[$id]
+        ]);
+    }
+
+
+    /**
      * 转发图片
      */
     public function img()
