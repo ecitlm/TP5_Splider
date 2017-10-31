@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-31 19:57:53
+ * @Last Modified time: 2017-10-31 19:59:43
  */
 
 namespace app\api\controller;
@@ -136,10 +136,7 @@ class Nba
     public function new_list(){
         $page  = (isset($_GET['page'])) ? $_GET ['page'] : "0";
         $page= $page *15;
-        var_dump($page);
         $res = HttpGet("https://3g.163.com/touch/reconstruct/article/list/BD2AQH4Qwangning/{$page}-15.html");
-        //$arr = json_decode(substr($res, 10, -1), true);
-
         return json([
             'msg' => 'success',
             'code' => 1,
