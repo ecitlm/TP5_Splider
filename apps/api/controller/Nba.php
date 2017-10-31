@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-31 19:59:43
+ * @Last Modified time: 2017-10-31 22:06:39
  */
 
 namespace app\api\controller;
@@ -156,6 +156,26 @@ class Nba
             'msg' => 'success',
             'code' => 1,
             'data' => $arr[$id]
+        ]);
+    }
+
+
+    public function website(){
+          return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => [
+                name=>"没有故事的小明同学",
+                job=>"Web开发工程师",
+                icon=>"https://coding.it919.cn/static/images/zixia.jpg",
+                address=>"深圳市南山区科技园",
+                latitude=>"22.549990",
+                longitude=>"113.950660",
+                github=>"https://github.com/ecitlm",
+                blog=>"https://code.it919.cn",
+                mail=>"ecitlm@163.com",
+                Motto=>'我们这一生，要走很远的路，有如水坦途，有荆棘挡道；有簇拥同行，有孤独漫步；有幸福如影，有苦痛袭扰；有迅跑，有疾走，有徘徊，还有回首……正因为走了许多路，经历的无数繁华与苍凉，才在时光的流逝中体会岁月的变迁，让曾经稚嫩的心慢慢地趋于成熟。'
+            ]
         ]);
     }
 
