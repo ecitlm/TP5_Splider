@@ -166,9 +166,13 @@ class Nba
         ]);
     }
 
+    /**
+     * @return \think\response\Json
+     * 文章评论
+     */
     public function news_comments(){
         $id = (isset($_GET['docid'])) ? $_GET ['docid'] : "D22DCS5S0005877U";
-        $res=HttpGet("https://comment.news.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/{$id}/comments/newList?offset=0&limit=8&headLimit=1&tailLimit=2&ibc=newswap&showLevelThreshold");
+        $res=HttpGet("https://comment.news.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/{$id}/comments/newList?offset=0&limit=10&headLimit=1&tailLimit=2&ibc=newswap&showLevelThreshold");
         $arr = json_decode($res, true)['comments'];
         $newArr = array();
         foreach($arr as $k=>$v){
@@ -179,7 +183,6 @@ class Nba
             'code' => 1,
             'data' => $newArr
         ]);
-
     }
 
 
@@ -188,21 +191,21 @@ class Nba
             'msg' => 'success',
             'code' => 1,
             'data' => [
-                name=>"没有故事的小明同学",
-                job=>"Web开发工程师",
-                icon=>"https://coding.it919.cn/static/images/zixia.jpg",
-                address=>"深圳市南山区科技园",
-                latitude=>"22.549990",
-                longitude=>"113.950660",
-                github=>"https://github.com/ecitlm",
-                blog=>"https://code.it919.cn",
-                mail=>"ecitlm@163.com",
-                Motto=>'我们这一生，要走很远的路，有如水坦途，有荆棘挡道；有簇拥同行，有孤独漫步；有幸福如影，有苦痛袭扰；有迅跑，有疾走，有徘徊，还有回首……正因为走了许多路，经历的无数繁华与苍凉，才在时光的流逝中体会岁月的变迁，让曾经稚嫩的心慢慢地趋于成熟。',
+                'name'=>"没有故事的小明同学",
+                'job'=>"Web开发工程师",
+                'icon'=>"https://coding.it919.cn/static/images/zixia.jpg",
+                'address'=>"深圳市南山区科技园",
+                'latitude'=>"22.549990",
+                'longitude'=>"113.950660",
+                'github'=>"https://github.com/ecitlm",
+                'blog'=>"https://code.it919.cn",
+                'mail'=>"ecitlm@163.com",
+                'Motto'=>'我们这一生，要走很远的路，有如水坦途，有荆棘挡道；有簇拥同行，有孤独漫步；有幸福如影，有苦痛袭扰；有迅跑，有疾走，有徘徊，还有回首……正因为走了许多路，经历的无数繁华与苍凉，才在时光的流逝中体会岁月的变迁，让曾经稚嫩的心慢慢地趋于成熟。',
                 'music'=>[
-                    src=>"https://coding.it919.cn/static/images/better_man.mp3",
-                    author=>"Robbie Williams",
-                    name=>"Better Man",
-                    poster=>"https://coding.it919.cn/static/images/poster.jpg"
+                    'src'=>"https://coding.it919.cn/static/images/better_man.mp3",
+                    'author'=>"Robbie Williams",
+                    'name'=>"Better Man",
+                    'poster'=>"https://coding.it919.cn/static/images/poster.jpg"
                 ]
             ]
         ]);
