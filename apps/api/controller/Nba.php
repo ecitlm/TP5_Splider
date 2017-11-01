@@ -138,10 +138,10 @@ class Nba
         $page= $page *15;
         $res = HttpGet("https://3g.163.com/touch/reconstruct/article/list/BD2AQH4Qwangning/{$page}-15.html");
 		$arr=json_decode(substr($res, 9, -1), true)['BD2AQH4Qwangning'];
+		//数据里面有一些直播的新闻数据、需要删除那些数据
 		foreach ($arr as $k=>$v) {
 			if(!empty($arr[$k]['liveInfo'])){
 				unset($arr[$k]);  
-				//var_dump($arr[$k]['liveInfo']);
 			}	 
 		}
         return json([
@@ -164,6 +164,22 @@ class Nba
             'code' => 1,
             'data' => $arr[$id]
         ]);
+    }
+
+    public function news_comments(){
+        $id = (isset($_GET['docid'])) ? $_GET ['docid'] : "D22DCS5S0005877U";
+        $res=HttpGet("https://comment.news.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/{$id}/comments/newList?offset=0&limit=8&headLimit=1&tailLimit=2&ibc=newswap&showLevelThreshold");
+        $arr = json_decode($res, true)['comments'];
+        $newArr = array();
+        foreach($arr as $k=>$v){
+            array_push($newArr, $arr[$k]);
+        }
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => $newArr
+        ]);
+
     }
 
 
