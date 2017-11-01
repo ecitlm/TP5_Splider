@@ -137,10 +137,13 @@ class Nba
         $page  = (isset($_GET['page'])) ? $_GET ['page'] : "0";
         $page= $page *15;
         $res = HttpGet("https://3g.163.com/touch/reconstruct/article/list/BD2AQH4Qwangning/{$page}-15.html");
+		$arr=json_decode(substr($res, 9, -1), true)['BD2AQH4Qwangning'];
+		array_shift($arr);
+		array_shift($arr);
         return json([
             'msg' => 'success',
             'code' => 1,
-            'data' => json_decode(substr($res, 9, -1), true)['BD2AQH4Qwangning']
+            'data' => $arr
         ]);
     }
 
