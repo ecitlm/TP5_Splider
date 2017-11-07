@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-31 22:34:03
+ * @Last Modified time: 2017-11-07 22:52:43
  */
 
 namespace app\api\controller;
@@ -130,22 +130,6 @@ class Nba
             'code' => 1,
             'data' => json_decode($res, true)['schedule@getMonthListByTeam']['data']
         ]);
-    }
-
-	/**
-	* 获取球队赛程
-	*/
-	public function team_schedule()
-    {
-        $id = (isset($_GET['teamId'])) ? $_GET ['teamId'] : "24";
-		$mouth = (isset($_GET['mouth'])) ? $_GET ['mouth'] : "11";
-        $res = HttpGet("https://nb.3g.qq.com/nba/api/schedule@getMonthListByTeam?teamid={$id}&mouth={$mouth}&sid=");
-        return json([
-            'msg' => 'success',
-            'code' => 1,
-            'data' => json_decode($res, true)['schedule@getMonthListByTeam']['data']
-        ]);
-
     }
 
     /**
