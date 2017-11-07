@@ -1,5 +1,4 @@
 <?php
-
 header("Access-Control-Allow-Origin: *");
 //入口文件绑定模块名
 //define('BIND_MODULE','api');
