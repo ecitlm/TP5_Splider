@@ -121,6 +121,22 @@ class Nba
 
     }
 
+	/**
+	* 获取球队赛程
+	*/
+	public function team_schedule()
+    {
+        $id = (isset($_GET['teamId'])) ? $_GET ['teamId'] : "24";
+		$mouth = (isset($_GET['mouth'])) ? $_GET ['mouth'] : "11";
+        $res = HttpGet("https://nb.3g.qq.com/nba/api/schedule@getMonthListByTeam?teamid={$id}&mouth={$mouth}&sid=");
+        return json([
+            'msg' => 'success',
+            'code' => 1,
+            'data' => json_decode($res, true)['schedule@getMonthListByTeam']['data']
+        ]);
+
+    }
+
     /**
      * 球队阵容
      */
