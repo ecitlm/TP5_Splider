@@ -244,14 +244,9 @@ class Nba
     public function img()
     {
         $filename = (isset($_GET['imgurl'])) ? $_GET ['imgurl'] : "https://code.it919.cn/img/head.jpg";
-        $size = getimagesize($filename);
-        $fp = fopen($filename, "rb");
-        if ($size && $fp) {
-            header("Content-type: {$size['mime']}");
-            fpassthru($fp);
-            exit;
-        } else {
-            echo "<img src='https://code.it919.cn/img/head.jpg'>";
-        }
+		header('content-type: image/jpeg');
+        echo file_get_contents($filename);
+        die();
+       
     }
 }
