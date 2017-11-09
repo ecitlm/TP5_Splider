@@ -23,24 +23,31 @@ class Base
     private function checkSign()
     {
         $params = $_REQUEST;
-
+        $times = time() * 1000;
+        if ($times - floatval($params['timestamp']) >300000) {
+            echo json_encode(array(
+                'msg' => '请求是时间失效',
+                'code' => 999
+            ));
+            die();
+        }
         if (empty($params['sign'])) {
             echo json_encode(array(
                 'msg' => '缺少Sign参数',
                 'code' => 999
             ));
             die();
-        }else {
+        } else {
             $responseSign = $params['sign'];
             $params['appkey'] = config('appkey');
             unset($params['sign']);
             ksort($params);
             $str = implode($params);
-            $sign= MD5($str);
+            $sign = MD5($str);
             if ($sign != $responseSign) {
                 echo json_encode(array(
                     'msg' => 'sign签名错误',
-                    'code' => 406,
+                    'code' => 406
                 ));
                 die();
             }
