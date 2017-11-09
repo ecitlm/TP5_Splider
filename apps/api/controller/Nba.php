@@ -4,7 +4,7 @@
  * @Author: ecitlm
  * @Date:   2017-10-26 21:25:53
  * @Last Modified by:   ecitlm
- * @Last Modified time: 2017-10-31 22:34:03
+ * @Last Modified time: 2017-11-07 22:52:43
  */
 
 namespace app\api\controller;
@@ -244,14 +244,9 @@ class Nba extends Base
     public function img()
     {
         $filename = (isset($_GET['imgurl'])) ? $_GET ['imgurl'] : "https://code.it919.cn/img/head.jpg";
-        $size = getimagesize($filename);
-        $fp = fopen($filename, "rb");
-        if ($size && $fp) {
-            header("Content-type: {$size['mime']}");
-            fpassthru($fp);
-            exit;
-        } else {
-            echo "<img src='https://code.it919.cn/img/head.jpg'>";
-        }
+		header('content-type: image/jpeg');
+        echo file_get_contents($filename);
+        die();
+       
     }
 }
