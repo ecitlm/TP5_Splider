@@ -8,6 +8,10 @@ namespace app\api\controller;
 class Base
 {
 
+    /**
+     * Base constructor.
+     * 构造函数初始化签名验证
+     */
     public function __construct()
     {
         $this->checkSign();
@@ -16,7 +20,7 @@ class Base
     /**
      * 校验签名
      */
-    public function checkSign()
+    private function checkSign()
     {
         $params = $_REQUEST;
 
@@ -36,8 +40,7 @@ class Base
             if ($sign != $responseSign) {
                 echo json_encode(array(
                     'msg' => 'sign签名错误',
-                    'code' => 999,
-                    'sign'=>$sign
+                    'code' => 406,
                 ));
                 die();
             }

@@ -9,7 +9,7 @@
 
 namespace app\api\controller;
 
-class Nba
+class Nba extends Base
 {
     /**
      * @return \think\response\Json
