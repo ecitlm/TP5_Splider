@@ -14,19 +14,26 @@ class Base
      */
     public function __construct()
     {
-        $this->checkSign();
+        $this->checkParams();
     }
 
     /**
      * 校验签名
      */
-    private function checkSign()
+    private function checkParams()
     {
         $params = $_REQUEST;
         $times = time() * 1000;
+        if(empty($params['timestamp'])){
+        	 echo json_encode(array(
+                'msg' => '缺少timestamp参数',
+                'code' => 999
+            ));
+        	 die();
+        }
         if ($times - floatval($params['timestamp']) >300000) {
             echo json_encode(array(
-                'msg' => '请求是时间失效',
+                'msg' => '请求时间失效',
                 'code' => 999
             ));
             die();
