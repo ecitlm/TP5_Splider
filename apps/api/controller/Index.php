@@ -19,6 +19,6 @@ class Index extends Common
     public function index()
     {
         $res=HttpGet("https://api.it919.cn/docs/#/");
-        return $res;
+        echo $res;
     }
 }

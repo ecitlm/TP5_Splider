@@ -1,9 +1,9 @@
 <?php
 /*
-* @Author: ecitlm
-* @Date:   2017-05-29 19:31:05
-* @Last Modified by:   ecitlm
-* @Last Modified time: 2017-05-30 18:04:42
+* @Author:ecitlm
+* @Date:  2017-05-29 19:31:05
+* @Last   Modified by:   ecitlm
+* @Last   Modified time: 2017-05-30 18:04:42
 */
 
 namespace app\api\controller;
@@ -177,7 +177,7 @@ class Music
     public function search()
     {
         $keyword = $_GET['keyword'];
-        $url = "http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword=" . $keyword . "&page=1&pagesize=20&showtype=1";
+        $url = "http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword={$keyword}&page=1&pagesize=20&showtype=1";
         $res = mobile_curl($url);
         return json([
             'msg' => 'success',

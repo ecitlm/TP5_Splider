@@ -7,7 +7,7 @@
 */
 
 namespace app\api\controller;
-
+include('QueryList.php');
 class Picture
 {
 
@@ -80,6 +80,29 @@ class Picture
             'data' => $arr
         ]);
     }
+
+	public function meizi_detail()
+    {
+
+        $id = (isset($_GET['id'])) ? intval($_GET ['id']) : 5585;
+        $url = "http://www.meizitu.com/a/{$id}.html";
+		$data = Http_Spider($url);
+        \phpQuery::newDocumentHTML($data);
+        $arr = array();
+        $list = pq('#pagecontent p img');
+        foreach ($list as $li) {
+			 $tmp = array(
+               'src' =>pq($li)->attr('src'),
+				'alt'=>pq($li)->attr('alt')
+            );
+            array_push($arr, $tmp);
+
+        }
+        var_dump($arr);
+    }
+
+
+
 
 
     /**
